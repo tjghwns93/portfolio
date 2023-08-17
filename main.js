@@ -125,69 +125,6 @@ window.addEventListener('mousemove', e => {
 
 ///////////active/////////////////
 // const hbimg = document.querySelector('.hobby .hobbybox .hobby_img');
-window.addEventListener("scroll", function() {
-
-    const windowHeight = window.innerHeight;
-    const nameP = document.querySelector('.header .name p');
-    const nameSpan = document.querySelector('.header .name span');
-    const hobbybar = document.querySelectorAll('.hobbybar');
-    const hobbybox = document.querySelectorAll('.hobbybox');
-    const hobbyTxt = document.querySelectorAll('.hobby_txt span');
-    const favoriteTxt = document.querySelectorAll('.favorite_txt span');
-    const page2 = document.querySelector(".page2 .container");
-    const pg2rect = page2.getBoundingClientRect();
-    const page3 = document.querySelector(".page3 .container");
-    const pg3rect = page3.getBoundingClientRect();
-    const page5 = document.querySelector(".page5 .container");
-    const pg5rect = page5.getBoundingClientRect();
-    const favoriteImg = document.querySelectorAll('.favoritebox .favoriteimages .favoriteimg');
-    const favoriteBars = document.querySelectorAll('.favoritebars');
-    const worksTxt1 = document.querySelectorAll('.works_txt .mywork_txt span')
-    const worksTxt2 = document.querySelectorAll('.works_txt .project_txt span')
-
-
-
-    // if (window.pageYOffset === 0) {
-    //     nameSpan.style.transform = 'none';
-    //     nameP.style.transform = 'none';
-    // } else {
-    //    nameSpan.style.transform = 'translateY(-100%)';
-    //    nameP.style.transform = 'translateY(-90px)';
-    // }
-
-    
-
-
-
-   
-
-
-
-
-
-    /////////////color///////////
-    // const color = document.querySelector('.color');
-    // const page3 = document.querySelector('.page3');
-    // const page1 = document.querySelector('.page1');
-    // const viewportHeight = window.innerHeight;
-    // const scrollPos = window.pageYOffset;
-    // const elemTop = color.offsetTop;
-    // const elemBottom = elemTop + color.offsetHeight;
-
-    // // 요소가 뷰포트 하단에서 상단으로 이동하는 동안 0에서 1까지의 비율을 계산
-    // const bacPer = Math.max(0, Math.min(1, (scrollPos - elemTop) / (elemBottom - viewportHeight - elemTop)));
-
-    // const endColor = [34, 34, 36];
-
-    // const r = Math.floor(endColor[0] * (1 - bacPer));
-    // const g = Math.floor(endColor[1] * (1 - bacPer));
-    // const b = Math.floor(endColor[2] * (1 - bacPer));
-
-
-    // page2.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-    // page3.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-    
-});
 
 /////////////sticky///////////
 
@@ -263,12 +200,24 @@ proworkNext.addEventListener('click', function() {
 
 ///////////////web, project nav/////////////////////////////
 ///////////////web, project nav/////////////////////////////
-
-
+const hobbybox2 = document.querySelector('.hobbybox.hb2');
+const hobbybox3 = document.querySelector('.hobbybox.hb3');
 const webswiper = document.querySelector('.page6 .swiper');
 const pjswiper = document.querySelector('.page7 .swiper');
 const webswiperNav = document.querySelector('.header .webnav .webnav_web');
 const pjswiperNav = document.querySelector('.header .webnav .webnav_project');
+const hobbyTxt = document.querySelector('.hobby_txt span');
+const page2 = document.querySelector('.page2');
+const page3 = document.querySelector('.page3');
+const page5 = document.querySelector('.page5');
+const favoriteList = document.querySelector('.favoritelist');
+const favoriteTxt1 = document.querySelector('.favorite_txt .ft1');
+const favoriteTxt2 = document.querySelector('.favorite_txt .ft2');
+const page5Txt = document.querySelectorAll('.page5 span');
+
+
+
+
 
 // Create the Intersection Observer for webswiper
 const observerWebswiper = new IntersectionObserver(
@@ -302,9 +251,90 @@ const observerPjswiper = new IntersectionObserver(
     }
 );
 
+const observerpage2 = new IntersectionObserver(
+    function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                hobbyTxt.style.opacity= '1';
+                hobbyTxt.style.transform= 'none';
+                hobbybox2.style.opacity= '1';
+                hobbybox3.style.opacity= '1';
+                hobbybox2.style.transform= 'none';
+                hobbybox3.style.transform= 'none';
+        //     } else {
+        //         hobbyTxt.style.opacity= '0';
+        //         hobbyTxt.style.transform= 'translateY(50%)';
+        //         hobbybox2.style.opacity= '0';
+        //         hobbybox3.style.opacity= '0';
+        //         hobbybox2.style.transform= 'translateY(50%)';
+        //         hobbybox3.style.transform= 'translateY(50%)';
+            }
+        });
+    },
+    {
+        threshold: 0.5
+    }
+);
+
+
+const observerpage3 = new IntersectionObserver(
+    function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                favoriteList.style.top='32%'
+                favoriteTxt1.style.opacity='1'
+                favoriteTxt2.style.opacity='1'
+            // } else {
+            //     favoriteList.style.top='100%'
+            //     favoriteTxt1.style.opacity='0'
+            //     favoriteTxt2.style.opacity='0'
+            }
+        });
+    },
+    {
+        threshold: 0.5
+    }
+);
+
+const observerpage5 = new IntersectionObserver(
+    function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                page5Txt.forEach(function(txt) {
+                    txt.style.opacity = '1';
+                });
+            // } else {
+            //     page5Txt.forEach(function(txt) {
+            //         txt.style.opacity = '0';
+            //     });
+            }
+        });
+    },
+    {
+        threshold: 0.875
+    }
+);
+
+
+
 // Observe sections
 observerWebswiper.observe(webswiper);
 observerPjswiper.observe(pjswiper);
+observerpage2.observe(page2);
+observerpage3.observe(page3);
+observerpage5.observe(page5);
+//////////////thumbnail-click/////////////////////////////////////
+
+const workthumbNails = document.querySelectorAll('.workthumbnail');
+const webViews = document.querySelectorAll('.web_view a');
+
+workthumbNails.forEach(function(thumbnail, index) {
+    thumbnail.addEventListener('click', function(e) {
+       /*  e.preventDefault(); */ // Prevent default link behavior
+        webViews[index].click();
+    });
+});
+
 
 
 ////////////////////summenu///////////////////////////////////////////////
@@ -334,7 +364,6 @@ setInterval(function () {
     let dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일']
     let dayListEn = ['sunday', 'monday', 'tuesday', 'wedneday', 'thursday', 'friday', 'saturday']
 
-    console.log(dayList[2])
     let hh = addZero(today.getHours())
     let mm = addZero(today.getMinutes())
     let ss = addZero(today.getSeconds())
@@ -350,7 +379,6 @@ setInterval(function () {
     document.querySelector("#month").innerHTML = MM
     document.querySelector("#date").innerHTML = DD
     document.querySelector("#day").innerHTML = dd
-    console.log(ss)
 
     function addZero(num) {
 

@@ -293,7 +293,7 @@ font-family: 'Play', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     color: red;
-    transition: opacity 3s 1s;
+    transition: opacity 3s 0.6s;
     opacity: 0;
 }
   
@@ -302,7 +302,7 @@ font-family: 'Play', sans-serif;
     left: 50%;
     transform: translateX(-50%);
     bottom: 15vh;
-    transition: opacity 3s 2s, bottom 3s 2s;
+    transition: opacity 3s 1.2s, bottom 3s 1.2s;
     color: #ffffff;
     opacity: 0;
     display: flex;
@@ -382,7 +382,6 @@ font-family: 'Play', sans-serif;
     position: absolute;
     top: 15vh;
     left: -2vw;
-    overflow: hidden;
 }
 .hobby_txt span{
     color: red;
@@ -391,6 +390,9 @@ font-family: 'Play', sans-serif;
     font-size: 9rem;
     display: inline-block;
     text-transform: uppercase;
+    transform: translateY(50%);
+    transition: 0.4s;
+    opacity: 0;
 }
 
 
@@ -411,20 +413,20 @@ font-family: 'Play', sans-serif;
     text-align: right;
     line-height: 24px;
     z-index: 100;
+    
 }
 
-.hobby .hobbybox.hb1{
-    transition: transform 0.5s 2s, opacity 0.5s 2s;
-    align-items: center;
-
-}
 
 .hobby .hobbybox.hb2{
-    transition: transform 0.5s 1.3s, opacity 0.5s 1.3s;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: 1s 0.2s
 }
 
 .hobby .hobbybox.hb3{
-    transition: transform 0.5s 1.5s, opacity 0.5s 1.5s;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: 1s 0.4s;
 }
 .hobby .hobbybars .hobbybar:nth-child(1){
     background: url(img/KakaoTalk_20230727_154937084.png) no-repeat center;
@@ -503,6 +505,7 @@ font-family: 'Play', sans-serif;
     width: 100%;
     margin-top: 25vh;
     height: 100vh;
+    overflow: hidden;
 }
 
 .page3 .container{
@@ -560,22 +563,27 @@ font-family: 'Play', sans-serif;
     position: absolute;
     top: 4vh;
     left: -3vw;
+    
 }
-.favorite_txt span:nth-child(1){
+.favorite_txt .ft1{
     color: #ffffff;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 3.875rem;
     display: inline-block;
     text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
-.favorite_txt span:nth-child(3){
+.favorite_txt .ft2{
     color: #ff0000;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 5rem;
     display: inline-block;
     text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s 0.3s;
 }
 
 
@@ -644,7 +652,7 @@ font-family: 'Play', sans-serif;
 
 .page3 .favoritelist{
     position: absolute;
-    top: 20%;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     width: 23.5rem;
@@ -655,9 +663,11 @@ font-family: 'Play', sans-serif;
     font-family: 'Play', sans-serif;
     text-transform: uppercase;
     font-size: 1rem;
-    line-height: 3.5rem;
+    line-height: 2.5rem;
     text-align: center;
+    transition: top 3s;
 }
+
 
 .page3 .favoritelist p span{
     font-size: 1.875rem;
@@ -676,6 +686,9 @@ font-family: 'Play', sans-serif;
     display: flex;
     justify-content: center;
 }
+.page5 span{
+    opacity: 0;
+}
 
 .works_txt{
     display: inline-block;
@@ -687,15 +700,29 @@ font-family: 'Play', sans-serif;
     font-weight: 900;
     line-height: 12vh;
     pointer-events: none;
-    
 }
 
+.works_txt .my{
+}
+
+.works_txt .mws{
+    transition-delay:0.2s;
+
+}
+
+.project_txt .and{
+    transition-delay:0.4s;
+}
+
+.project_txt .some{
+    transition-delay:0.8s;
+}
 
 .project_txt span{
-    
     font-size: 5rem;
    font-weight: 10;
 }
+
 
 
 
@@ -739,6 +766,7 @@ font-family: 'Play', sans-serif;
     height: 28vw;
     margin-bottom: 4%;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .page6 .work .workthumbnail img{
@@ -910,7 +938,7 @@ font-family: 'Play', sans-serif;
     width: 83%;
     height: 100%;
     background: url(img/Morningstars.gif) no-repeat center;
-    background-size: 300px;
+    background-size: 400px;
 }
 
 .page7 .work{
@@ -934,6 +962,7 @@ font-family: 'Play', sans-serif;
     height: 28vw;
     margin-bottom: 4%;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .page7 .work .web_desc{
