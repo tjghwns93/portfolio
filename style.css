@@ -1,5 +1,9 @@
 @import url(reset.css);
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100..900&family=Rock+3D&display=swap");
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 .container {
   width: 86%;
   margin: 0 auto;
@@ -48,9 +52,11 @@ header .name {
 }
 header .name a {
   font-size: 21px;
+  font-family: "Rock 3D", system-ui;
+  font-weight: 400;
   color: #000;
   opacity: 0.88;
-  letter-spacing: -1.1px;
+  letter-spacing: -1.5px;
 }
 header .name:hover {
   transform: translateY(10px);
@@ -82,7 +88,7 @@ header .header_nav ul a {
 
 /* ///////// intro ////////// */
 #intro {
-  background-color: rgb(18, 18, 18);
+  background-color: rgb(0, 0, 0);
   width: 100%;
   padding: 45vh 0 60vh;
 }
@@ -119,6 +125,7 @@ header .header_nav ul a {
   letter-spacing: 0.011rem;
   line-height: 1.1;
   word-break: keep-all;
+  will-change: opacity;
 }
 #intro .container .intro_img {
   width: 40%;
