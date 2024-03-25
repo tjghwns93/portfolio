@@ -467,6 +467,9 @@ header .header_nav ul a {
   #works .container .works_wrap .works_works .works_content h3 {
     font-size: 2rem;
   }
+  #works .container .works_wrap .works_works .works_content span {
+    font-size: 10px;
+  }
   #works .container .works_wrap .works_works .works_content p {
     line-height: 1.1rem;
     font-size: 13px;
@@ -587,6 +590,7 @@ header .header_nav ul a {
     font-size: 1.8rem;
   }
   #works .container .works_wrap .works_works .works_content span {
+    font-size: 10px;
     margin-bottom: 1vw;
   }
   #works .container .works_wrap .works_works .works_content p {
