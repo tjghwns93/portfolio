@@ -42,7 +42,7 @@ header {
   pointer-events: none;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
           backdrop-filter: saturate(180%) blur(20px);
-  background: rgba(251, 251, 253, 0.8);
+  background: rgba(22, 22, 23, 0.8);
   border-bottom: 1px solid rgba(0, 0, 0, 0.16);
 }
 header .container {
@@ -59,7 +59,7 @@ header .name a {
   font-size: 21px;
   font-family: "Rock 3D", system-ui;
   font-weight: 400;
-  color: #000;
+  color: #fff;
   opacity: 0.88;
   letter-spacing: -1.5px;
 }
@@ -86,7 +86,7 @@ header .header_nav ul li.active::after {
 }
 header .header_nav ul a {
   display: block;
-  color: #000;
+  color: #fff;
   font-size: 12px;
   opacity: 0.88;
 }
