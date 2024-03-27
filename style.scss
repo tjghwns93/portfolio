@@ -17,7 +17,6 @@ html {
 body {
   font-family: "Noto Sans KR", sans-serif;
   word-break: keep-all;
-  background: #f7f7f7;
 
 
 }
@@ -190,9 +189,7 @@ header {
   width: 100%;
   padding: 14vh 0 30vh;
   overflow: hidden;
-  background: radial-gradient(88.93% 1072.21% at 11.07% 0%, #ddd4d9 0%, #bfc9db 100%);
-
-
+  background: #f7f7f7;
 
 
   .container {
@@ -293,9 +290,10 @@ header {
 
 #works {
   width: 100%;
-  margin: 15px 0;
+  margin-top: 15px;
   padding: 14vh 0 17vh;
-  background-color: rgb(234, 234, 234);
+  background: radial-gradient(88.93% 1072.21% at 11.07% 0%, #ddd4d9 0%, #bfc9db 100%);
+
 
 
 
