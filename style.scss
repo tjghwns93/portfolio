@@ -1,11 +1,15 @@
 @charset "UTF-8";
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100..900&family=Rock+3D&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 // font-family: 'Bebas Neue', sans-serif;
 // font-family: 'Nanum Myeongjo', serif;
 // font-family: "Noto Sans KR", sans-serif;
 // font-family: "Rock 3D", system-ui;
+//font-family: "Playfair Display", serif;
+//font-family: "Cormorant Garamond", serif;
+
 html {
   scroll-behavior: smooth;
 }
@@ -13,6 +17,8 @@ html {
 body {
   font-family: "Noto Sans KR", sans-serif;
   word-break: keep-all;
+  background: #f7f7f7;
+
 
 }
 
@@ -67,7 +73,7 @@ header {
 
     a {
       font-size: 21px;
-      font-family: "Rock 3D", system-ui;
+      font-family: "Cormorant Garamond", serif;
       font-weight: 400;
       color: #fff;
       opacity: .88;
@@ -93,6 +99,7 @@ header {
           display: block;
           width: 100%;
           height: 0.1rem;
+          margin-top: 1px;
           background-color: red;
           opacity: 0;
           transition: opacity 0.3s;
@@ -116,7 +123,7 @@ header {
 /* ///////// intro ////////// */
 
 #intro {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(5, 5, 6);
   width: 100%;
   padding: 40vh 0 70vh;
 
@@ -183,6 +190,9 @@ header {
   width: 100%;
   padding: 14vh 0 30vh;
   overflow: hidden;
+  background: radial-gradient(88.93% 1072.21% at 11.07% 0%, #ddd4d9 0%, #bfc9db 100%);
+
+
 
 
   .container {
@@ -195,8 +205,8 @@ header {
       text-align: center;
 
       h4 {
-        font-size: 80px;
-        font-family: 'Bebas Neue', sans-serif;
+        font-size: 40px;
+        font-family: "Cormorant Garamond", serif;
         font-weight: 400;
       }
 
@@ -283,16 +293,19 @@ header {
 
 #works {
   width: 100%;
+  margin: 15px 0;
   padding: 14vh 0 17vh;
-  background-color: #f8f8f8;
+  background-color: rgb(234, 234, 234);
+
+
 
   .works_banner {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 5.5rem;
 
     h4 {
-      font-size: 80px;
-      font-family: 'Bebas Neue', sans-serif;
+      font-size: 40px;
+      font-family: "Cormorant Garamond", serif;
       font-weight: 400;
     }
   }
@@ -423,8 +436,8 @@ header {
       margin-bottom: 8rem;
 
       h4 {
-        font-size: 80px;
-        font-family: 'Bebas Neue', sans-serif;
+        font-size: 40px;
+        font-family: "Cormorant Garamond", serif;
         font-weight: 400;
         color: #fff;
       }
