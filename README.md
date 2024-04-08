@@ -1,4 +1,4 @@
-# portfolio
+# portfolio (개인프로젝트)
 
 
 ### portfolio를 Figma로 디자인하고 VanillaJS와 SCSS를 이용하여 퍼블리싱 했습니다. 
