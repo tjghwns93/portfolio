@@ -622,6 +622,8 @@ header .header_nav ul a {
   }
   .design-detail {
     height: 100vh !important;
+    top: 0 !important;
+    transform: translate(-50%, 0) !important;
   }
   .design-detail .design-detail-body {
     width: 100vw !important;
@@ -754,6 +756,8 @@ header .header_nav ul a {
   }
   .design-detail {
     height: 100vh !important;
+    top: 0 !important;
+    transform: translate(-50%, 0) !important;
   }
   .design-detail .design-detail-body {
     width: 100vw !important;

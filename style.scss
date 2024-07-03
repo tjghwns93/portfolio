@@ -797,6 +797,8 @@ header {
 
   .design-detail {
     height: 100vh !important;
+    top: 0 !important;
+    transform: translate(-50%, 0) !important;
 
     .design-detail-body {
       width: 100vw !important;
@@ -988,6 +990,8 @@ header {
 
   .design-detail {
     height: 100vh !important;
+    top: 0 !important;
+    transform: translate(-50%, 0) !important;
 
     .design-detail-body {
       width: 100vw !important;
