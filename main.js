@@ -149,7 +149,63 @@ stacksIcon.forEach(function(icon){
 })
 
 
-///////////////////////// scrollbar  //////////////////
+///////////////////////// swiper //////////////////
 
+let boxSpeed = 0.07;
+document.addEventListener('DOMContentLoaded', (event) => {
+    const swiperBox = document.querySelector('.swiper-wrapper');
+    let position = 0;
+    
+    function moveLeft() {
+        position -= boxSpeed; // 속도를 조절하여 부드럽게 이동
+        swiperBox.style.transform = `translateX(${position}%)`;
+        if (position <= -50) { // 왼쪽으로 완전히 사라지면
+            position = 0; // 다시 초기 위치로 이동
+        }
+        requestAnimationFrame(moveLeft); // 계속해서 애니메이션을 반복
+    }
+    
+    moveLeft(); // 애니메이션 시작
+});
 
+const designBoxs = document.querySelectorAll('.swiper-slide');
+designBoxs.forEach((a) => {
+    a.addEventListener('mouseover', () => {
+        boxSpeed = 0.02;
+        a.style.transform = 'scale(1.1)';
+    });
+    a.addEventListener('mouseout', () => {
+        boxSpeed = 0.07;
+        a.style.transform = 'scale(1)';
+    });
+});
+
+const designDetail = document.querySelector('.design-detail');
+const designDetailBody = document.querySelector('.design-detail-body');
+const designDetailImg = document.querySelector('.design-detail-body img');
+const closeBtn = document.querySelector('.closeBtn');
+designBoxs.forEach((a)=>{
+    a.addEventListener('click',()=>{
+        let img = a.querySelector('img').src;
+        if (img.includes('%20half')) { 
+            designDetailBody.style.width = '85vw';
+            img = img.replace(/%20half/g, ''); 
+        }else {
+            designDetailBody.style.width = '40vw';
+        }
+        designDetail.style.opacity = '1';
+        designDetail.style.pointerEvents = 'auto';
+        designDetailImg.src = img;
+        document.body.style.overflow = 'hidden';
+        document.body.style.pointerEvents = 'none';
+    })
+});
+
+closeBtn.addEventListener('click', ()=>{
+    designDetail.style.opacity = '0';
+        designDetail.style.pointerEvents = 'none';
+        document.body.style.overflow = '';
+        document.body.style.pointerEvents = '';
+        designDetailImg.src = '';
+})
 
