@@ -355,7 +355,7 @@ header .header_nav ul a {
 }
 #design .swiper-container .swiper-wrapper .swiper-slide {
   position: relative;
-  width: 300px;
+  width: 370px;
   margin-left: 50px;
   transition: transform 0.3s;
   cursor: pointer;
